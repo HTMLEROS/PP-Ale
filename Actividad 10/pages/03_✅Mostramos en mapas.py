@@ -23,7 +23,7 @@ def generar_mapa():
 
 lagos = pd.read_csv('ar-airports.csv')
 st.title("Mapa")
-st.write("A continuación, en la **Parte 3** filtraremos en el mapa los aeropuertos por su magnitud.")
+st.write("A continuación, filtraremos en el mapa los aeropuertos por su magnitud.")
 mapa = generar_mapa()
 
 def agregar_marca_aerop(row):

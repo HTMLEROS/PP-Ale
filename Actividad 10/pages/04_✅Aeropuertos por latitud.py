@@ -5,7 +5,7 @@ import pandas as pd
 aeros = pd.read_csv("ar-airports.csv")
 
 st.title("Filtro con **Slider**")
-st.write("En la **4ta Parte** filtraremos los aeropuertos por coordenadas verticales de norte a sur, usando la función SLider de Streamlit.")
+st.write("En esta última sección, filtraremos los aeropuertos por coordenadas verticales de norte a sur, usando la función Slider de Streamlit.")
 st.write("Podés mover el slider para seleccionar un rango de latitudes y ver qué aeropuertos entran en ese rango.")
 
 # Obtener valores mínimos y máximos de latitud
