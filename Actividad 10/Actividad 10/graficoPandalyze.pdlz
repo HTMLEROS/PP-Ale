@@ -1,0 +1,176 @@
+{
+  "_signature": "PDLZ_v1::1762962311440",
+  "data": {
+    "variables": [
+      {
+        "id": "169646095",
+        "name": "aeros"
+      },
+      {
+        "id": "2839441679",
+        "name": "nombres"
+      }
+    ],
+    "csvsData": [
+      {
+        "id": 518958243,
+        "filename": "ar-airports.csv",
+        "columnsNames": [
+          "id",
+          "ident",
+          "type",
+          "name",
+          "latitude_deg",
+          "longitude_deg",
+          "elevation_ft",
+          "continent",
+          "country_name",
+          "iso_country",
+          "region_name",
+          "iso_region",
+          "local_region",
+          "municipality",
+          "scheduled_service",
+          "gps_code",
+          "icao_code",
+          "iata_code",
+          "local_code",
+          "home_link",
+          "wikipedia_link",
+          "keywords",
+          "score",
+          "last_updated"
+        ]
+      }
+    ],
+    "blocks": {
+      "blocks": {
+        "languageVersion": 0,
+        "blocks": [
+          {
+            "type": "variables_set",
+            "id": "CvcT|IxolIUYs?/h:-~7",
+            "x": 137,
+            "y": 47,
+            "fields": {
+              "variableSetterKey": "169646095"
+            },
+            "inputs": {
+              "VALUE": {
+                "block": {
+                  "type": "read_csv",
+                  "id": "(`ooDI=wEI)e9!!SoVK[",
+                  "fields": {
+                    "csvOptions": "518958243"
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "variables_set",
+                "id": "WDXi;MNP#(2CyAp[-,w!",
+                "fields": {
+                  "variableSetterKey": "2839441679"
+                },
+                "inputs": {
+                  "VALUE": {
+                    "block": {
+                      "type": "property",
+                      "id": ":4*SICFT8k8B#SROqLV1",
+                      "extraState": {
+                        "selectedOption": "region_name"
+                      },
+                      "fields": {
+                        "dropdown": "region_name"
+                      },
+                      "inputs": {
+                        "blockInput": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "?``nuf1seY25VS_WD/)`",
+                            "fields": {
+                              "variableGetterKey": "169646095"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "next": {
+                  "block": {
+                    "type": "showInConsole",
+                    "id": "6O2zy[33Y%[+_If7#+@L",
+                    "inputs": {
+                      "VALUE": {
+                        "block": {
+                          "type": "bar",
+                          "id": "cu#w^Am]!kilm7fz5,E`",
+                          "inputs": {
+                            "dataFrameValue": {
+                              "block": {
+                                "type": "variables_get",
+                                "id": "f,aM#Ojqth_P8~[pi_?B",
+                                "fields": {
+                                  "variableGetterKey": "2839441679"
+                                }
+                              }
+                            },
+                            "xValue": {
+                              "block": {
+                                "type": "index",
+                                "id": "]xuvdhDO*%m@hmyRHU%5",
+                                "inputs": {
+                                  "argument": {
+                                    "block": {
+                                      "type": "variables_get",
+                                      "id": "}{bAPZ8{ujYL3wlIgK$F",
+                                      "fields": {
+                                        "variableGetterKey": "2839441679"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "yValue": {
+                              "block": {
+                                "type": "values",
+                                "id": "YV3JK`gr]8D-YgbO5@q$",
+                                "inputs": {
+                                  "argument": {
+                                    "block": {
+                                      "type": "variables_get",
+                                      "id": "@s=+naUy$[OTer]g@1-m",
+                                      "fields": {
+                                        "variableGetterKey": "2839441679"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "title": {
+                              "block": {
+                                "type": "primitive_text",
+                                "id": "Zl9~L$u,1hCYgtfmD-Hb",
+                                "fields": {
+                                  "TEXT": ""
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
